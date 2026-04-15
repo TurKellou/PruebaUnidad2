@@ -122,21 +122,27 @@ int intentosRestantes(int n) {
 
 // AHORCADO 
 void Ahorcado() {
-    string palabra = "codigo";
-    string oculto = "______";
+    srand(time(0));
+    int min = 0;
+    int max = 6;
+    int aleatorio = rand() % (max - min + 1) + min;
+
+    string palabra[7] = {"ruffles", "dell", "gomitas", "chocolate", "limones", "barbies", "polaca"};
+    string oculto(palabra[aleatorio].length(), '_');
     int intentos = 6;
     char letra;
 
-    while (intentos > 0 && oculto != palabra) {
+    while (intentos > 0 && oculto != palabra[aleatorio]) {
         cout << "Palabra: " << oculto << endl;
         cout << "Intentos: " << intentos << endl;
-        cout << "Letra: " << endl;
+        cout << "Letra: ";
         cin >> letra;
 
         bool acierto = false;
+        
 
-        for (int i = 0; i < palabra.length(); i++) {
-            if (palabra[i] == letra) {
+        for (int i = 0; i < palabra[aleatorio].length(); i++) {
+            if (palabra[aleatorio][i] == letra) {
                 oculto[i] = letra;
                 acierto = true;
             }
@@ -146,10 +152,10 @@ void Ahorcado() {
             intentos--;
     }
 
-    if (oculto == palabra)
-        cout << "Ganaste!" << endl;
+    if (oculto == palabra[aleatorio])
+        cout << "Ganaste!\n";
     else
-        cout << "Perdiste. Era: " << palabra << endl;
+        cout << "Perdiste. Era: " << palabra[aleatorio] << endl;
 }
 
 // MAIN 
