@@ -2,8 +2,6 @@
 #include <string>
 using namespace std;
 
-const int MAX = 50;
-
 //Clase producto
 class Producto {
 private:
@@ -39,7 +37,7 @@ public:
 // ================= CLASE INVENTARIO =================
 class Inventario {
 private:
-    Producto productos[MAX];
+    Producto productos[50];
     int total;
 
 public:
