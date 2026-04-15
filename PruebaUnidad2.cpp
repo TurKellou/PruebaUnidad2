@@ -145,7 +145,7 @@ int main() {
         cout << "1. Inventario\n";
         cout << "2. Ahorcado\n";
         cout << "3. Mostrar intentos (recursivo)\n";
-        cout << "4. Salir\n";
+        cout << "4. Salir"<<endl;
         cout << "Opcion: ";
 
         while (!(cin >> opcion)) {
@@ -158,7 +158,7 @@ int main() {
         case 1: {
             int op2;
             do {
-                cout << "\n============INVENTARIO============";
+                cout << "\n============INVENTARIO============"<<endl;
                 cout << "1. Agregar" <<endl; 
                 cout << "2. Mostrar" <<endl;
                 cout << "3. Buscar" <<endl;
