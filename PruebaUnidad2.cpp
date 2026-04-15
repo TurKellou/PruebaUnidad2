@@ -167,7 +167,7 @@ int main() {
                 cin >> op2;
 
                 
-                switch (op)
+                switch (op2)
                 {
                 case 1: inv.agregarProducto();
                     /* code */
